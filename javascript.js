@@ -31,3 +31,13 @@ function createColumns(colNum) {
 }
 
 createGrid();
+
+
+for (let i = 0; i < columns.length; i++){
+
+    let col = columns[i];
+    col.addEventListener("mouseover", function() {
+        col.style.backgroundColor = "red";
+    });
+   
+}
