@@ -1,10 +1,24 @@
 const container = document.querySelector("#container");
 let rows = document.getElementsByClassName("rows");
 let columns = document.getElementsByClassName("columns");
+const button = document.getElementById("resize");
+let gridDimension = 16;
+
+button.addEventListener("click", function() {
+    let newDim = prompt("How many squares would you like the new grid to have? (under 100)");
+    
+    if (newDim < 100){
+        gridDimension = newDim;
+        createGrid();
+    } else {
+        alert(newDim + " is too large, please try again and pick a number smaller than 100.");
+    }
+});
 
 function createGrid() {
-    createRows(16);
-    createColumns(16);
+    createRows(gridDimension);
+    createColumns(gridDimension);
+    hover();
 }
 
 function createRows(rowNum) {
@@ -32,12 +46,12 @@ function createColumns(colNum) {
 
 createGrid();
 
+function hover() {
+    for (let i = 0; i < columns.length; i++){
 
-for (let i = 0; i < columns.length; i++){
-
-    let col = columns[i];
-    col.addEventListener("mouseover", function() {
+        let col = columns[i];
+        col.addEventListener("mouseover", function() {
         col.style.backgroundColor = "red";
-    });
-   
-}
+    });  
+}}
+
