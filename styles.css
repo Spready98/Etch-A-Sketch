@@ -1,0 +1,14 @@
+
+.rows {
+    display: inline-flex;
+    border: 1px solid black;
+    min-width: 30px;
+    min-height: 30px;
+}
+
+.columns {
+    display: inline-flex;
+    border: 1px solid black;
+    min-width: 30px;
+    min-height: 30px;
+}
