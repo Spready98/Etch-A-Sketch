@@ -6,7 +6,7 @@ let gridDimension = 16;
 
 button.addEventListener("click", function() {
     let newDim = prompt("How many squares would you like the new grid to have? (under 100)");
-    
+    removeGrid(gridDimension);
     if (newDim < 100){
         gridDimension = newDim;
         createGrid();
@@ -55,3 +55,19 @@ function hover() {
     });  
 }}
 
+function removeGrid(colNum) {
+
+    for (let i = 0; i < colNum; i++) {
+
+        for (let j = 0; j < colNum; j++) {
+
+            while (rows[j].hasChildNodes()) {
+                rows[j].removeChild(rows[j].firstChild);
+            }
+        }
+    }
+
+    while (container.hasChildNodes()) {
+        container.removeChild(container.firstChild);
+    }
+}
