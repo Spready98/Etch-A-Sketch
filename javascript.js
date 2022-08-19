@@ -21,6 +21,7 @@ function createGrid() {
     hover();
 }
 
+// must save default width and fill out the width...
 function createRows(rowNum) {
 
     for (let i = 0; i < rowNum; i++) {
