@@ -1,6 +1,3 @@
 # Etch-A-Sketch
 
-After grid: CreateRows function creates div.row elements to append to container, which will add them on vertically.
-CreateColumns function has two for-loops to append div.col element to the rows. Normally, we would expect each div.col to stack vertically inside each div.row because we use appendChild, but since we use display: INLINE this causes the div.col to stack horizontally(inline) inside each row, therefore giving us the desired grid structure. 
-
-The rows variable in js lets us directly manipulate each row (through className identification) so we can appendChild div.col to it through rows[j].appendChild. For now, the columns variable is not used because we don't need to directly manipulate the columns.
+A project that combines HTML, Javascript, and CSS to create a user-controlled color changing grid. The user has the option to resize the grid from the default 16x16, up to but not including 100x100. The grid will retain its default container pixel dimensions and the actual grid squares will vary in dimensions to fill up the container.
