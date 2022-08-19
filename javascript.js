@@ -52,7 +52,10 @@ function hover() {
 
         let col = columns[i];
         col.addEventListener("mouseover", function() {
-        col.style.backgroundColor = "red";
+            let randRed = Math.floor(Math.random() * 256);
+            let randGreen = Math.floor(Math.random() * 256);
+            let randBlue = Math.floor(Math.random() * 256);
+            col.style.backgroundColor = 'rgb('+randRed+ ',' + randBlue +',' + randGreen +')';
     });  
 }}
 
@@ -72,3 +75,4 @@ function removeGrid(colNum) {
         container.removeChild(container.firstChild);
     }
 }
+
